@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="">
+    <style>
+        html, body {
+            margin: 0;
+        }
+        body > div {
+            width: 1302px; 
+        }
+        /*1 HEADER*/
+        .header {
+            width: 100%;
+            height: 152px;
+            background-color: #ffff;
+            position: sticky;
+            top: 0px;
+        }
+        .header_items {
+            width: 1302px;
+            height: 152px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo_name {
+            display: flex;
+            align-items: center;
+        }
+        .link {
+            width: 100px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .link > div {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background-color: #f26464;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .name {
+            margin-left: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+        /*2 INFO*/
+        .inf {
+            width: 1302px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .introduce {
+           margin-right: 180px;
+        }
+        
+        .number_note {
+            display: flex;
+            justify-content: flex-start;
+        }
+        h1 {
+            margin-top: 68px;
+        }
+        .number_note > div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+            margin-right: 60px;
+        }
+        /*about me*/
+        .aboutme {
+            margin: auto;
+            margin-top: 80px;
+        }
+        h2 {
+            width: fit-content;
+            border-bottom-style: solid;
+            border-bottom-color:#f26464;
+            padding-bottom: 10px;
+            font-size: 16px; font-weight: 700; font-family: Inter, sans-serif;
+        }
+        /*skills*/
+        .skills {
+            margin: auto;
+            display: flex;
+        }
+        .skills_list {
+            margin-right: 27px;
+        }
+        .list {
+            width: 651px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+       .list > div {
+            border: 0.25px;
+            border-style: solid;
+            border-color: #333;
+            padding: 15px 18px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 500;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+        .workex {
+            margin: auto;
+            margin-top: 60px;
+        }
+        .workex > div {
+            display: flex;
+            margin-right: -70px
+        }
+        .present, .hai018 {
+            font-family: Inter, sans-serif;
+        }
+        .strong1 {
+            font-size: 14px;
+        }
+        .abc {
+            font-size: 24px;
+        }
+        .strong2 {
+            font-size: 18px;
+        }
+        .present, .hai018 > p,li {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        li {
+            padding-top: 15px;
+        }
+        .img {
+            width: 473px;
+            height: 447px;
+        }
+        .work {
+            margin: auto;
+            margin-top: 50px;
+        }
+        .work > div {
+            font-family: Inter, sans-serif;
+            display: flex;
+            margin-top: 50px;
+            background-color: #f6f8fa;
+            justify-content: center;
+        }
+        .content > strong {
+            font-size: 30px;
+        }
+        .content > p {
+            font-size: 22px;
+        }
+        .content {
+            margin: 100px;
+        }
+        .content > button {
+            margin-top: 50px;
+        }
+        /*.content > button {
+            margin-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }*/
+        .footer {
+            margin-top: 100px;
+            width: auto;
+            height: 500px;
+            background-color: black;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Inter, sans-serif;
+        }
+        .download_btn {
+            color:#f26464;
+            background-color: #ffffff;
+            font-weight: 700;
+        }
+        .details_btn {
+            color:#f26464;
+            background-color:  #f6f8fa;
+            font-weight: 700;
+        }
+        .letstalk_btn {
+            color:#f26464; 
+            background-color: black;
+            font-weight: 700;
+        }
+        .link>div:hover {
+            background-color: #333;
+        }
+        button:hover {
+            background-color: #f26464;
+            color: #fff;
+        }
+        ::selection {
+           color: #fff;
+           background: black;
+        }
+        .des {
+            color: #333;
+            text-decoration: none;
+        }
+        .des:hover {
+            color: #f26464;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header_items">
+            <div class="logo_name">
+                <div class="logo" style="background-color: black; width: 40px; height: 40px; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fa-solid fa-j" style="color: #fff; font-size: 22px; font-size: 25px; font-family: Inter, sans-serif; font-weight: 600"></i>
+                </div>
+                <div class="name" style="font-size: 18px; font-weight: 400">JASON STROFF</div>
+            </div>
+            <div class="link" style="font-size: 15px;">
+                <div><i class="fa-brands fa-github" style="color: #ffff;"></i></div>
+                <div><i class="fa-brands fa-stack-overflow" style="color: #ffff;"></i></div>
+                <div><i class="fa-brands fa-linkedin-in"  style="color: #ffff;"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="inf">
+        <img src="https://www.designstub.com/demos/defolio/assets/images/profile-image.jpg" alt="" style="width: 528px; height: auto;">
+        <div class="introduce">
+            <div  style="font-family: Inter, sans-serif;">HI THERE</div>
+            <h1 style="font-family: Inter, sans-serif; font-size: 48px; font-weight: 600">I’m Jason Stroff <br>
+                UI/UX DESIGNER + <br> DEVELOPER based in <br> Florida.
+            </h1>
+            <div class="number_note">
+                <div>
+                    <strong style="font-family: Inter, sans-serif; font-size: 36px; color: #f26464; font-weight: 800">6+</strong>
+                    <span style="font-family: Inter, sans-serif; font-size: 16px;">Experience</span>
+                </div>
+                <div>
+                    <strong style="font-family: Inter, sans-serif; font-size: 36px; color: #f26464; font-weight: 800">89</strong>
+                    <span style="font-family: Inter, sans-serif; font-size: 16px;">Projects</span>
+                </div>
+                <div>
+                    <strong style="font-family: Inter, sans-serif; font-size: 36px; color: #f26464; font-weight: 800">52</strong>
+                    <span style="font-family: Inter, sans-serif; font-size: 16px;">Happy Clients</span>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="aboutme">
+        <!--text-decoration: underline; text-decoration-thickness: 0.2px; text-underline-offset: 10px-->
+        <h2>ABOUT ME</h2>
+        <p style="font-size: 24px; font-weight: 300; font-family: Inter, sans-serif; color: rgb(55, 55, 55)">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit tortor, ultricies in quam ut, 
+            luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum tellus. Integer bibendum eget dolor nec venenatis. 
+            Aliquam erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.
+        </p>
+    </div>
+    <div style="width: fit-content; height: auto; margin: auto; margin-top: 50px; margin-top: 80px; margin-bottom: 70px">
+        <button class="download_btn" style="text-align: center; border-style: solid; border-radius: 50px; width: 235px; height: 50px; border-color: #f26464;">DOWLOAD RESUME</button>
+    </div>
+    <div class="skills">
+        <div class="skills_list">
+            <h2>CORE SKILLS</h2>
+            <div class="list">
+                <div>JavaScript</div>
+                <div>Node.js</div>
+                <div>Express.js</div>
+                <div>MonggoDB</div>
+                <div>Vue.js</div>
+                <div>React</div>
+                <div>Sequelize</div>
+                <div>Github</div>
+                <div>HTML</div>
+            </div>
+        </div>
+        <div class="skills_list">
+            <h2>OTHER SKILLS</h2>
+            <div class="list">
+                <div>Storyblok</div>
+                <div>PWAs</div>
+                <div>Pesponsive Web Design</div>
+                <div>React</div> 
+                <div>Vuetify</div>
+            </div>
+        </div>   
+    </div>
+    <div class="workex">
+        <h2>WORK EXPERIENCE</h2>
+        <div>
+            <div class="present">
+                <strong class="strong1">2019 - Present</strong>
+                <p class="abc">Matrix Media Inc</p>
+                <strong class="strong2">Full Stack developer</strong>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem 
+                    maximus, ornare metus ut, congue enim. Sed fermentum.
+                </p>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis
+                    sem maximus, ornare metus ut.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+            </div>
+            <div class="hai018">
+                <strong class="strong1">2018 - 2019</strong> 
+                 <p class="abc">Lexind</p>
+                 <strong class="strong2">Senior app developer</strong>
+                 <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem 
+                     maximus, ornare metus ut, congue enim. Sed fermentum.
+                 </p>
+                 <li>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                     Duis quis sem maximus, ornare metus ut.
+                 </li>
+                 <li>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 </li>
+                 <li>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis 
+                     sem maximus, ornare metus ut.
+                 </li>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <h2>LATEST WORKS</h2>
+        <div>
+            <div class="content">
+                <strong>Tripy mobile app</strong>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, 
+                    ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur 
+                    mauris tristique efficitur. Aliquam rhoncus sem sed 
+                    ullamcorper venenatis. Aenean malesuada eu orci non sodales.
+                </p>
+                <button class="details_btn" style="border-style: solid; border-radius: 50px; width: 150px; height: 50px; border-color: #f26464;">DETAILS</button>
+            </div>
+            <img class="img" src="https://www.designstub.com/demos/defolio/assets/images/work-1.jpg" alt="">
+        </div>
+        <div>
+            <div class="content">
+                <strong>Hello mobile app</strong>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur 
+                    mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. 
+                    Aenean malesuada eu orci non sodales.</p>
+                <button class="details_btn" style="border-style: solid; border-radius: 50px; width: 150px; height: 50px; border-color: #f26464;">DETAILS</button>
+            </div>
+            <img  class="details_btn" class="img" src="https://www.designstub.com/demos/defolio/assets/images/work-2.jpg" alt="">
+        </div>
+        <div>
+            <div class="content">
+                <strong>Cute cookies app</strong>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Duis quis sem maximus, ornare metus ut, congue enim. 
+                    Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. 
+                    Aliquam rhoncus sem sed ullamcorper venenatis. 
+                    Aenean malesuada eu orci non sodales.</p>
+                <button  class="details_btn" style="border-style: solid; border-radius: 50px; width: 150px; height: 50px; border-color: #f26464;">DETAILS</button>
+            </div>
+            <img class="img" src="https://www.designstub.com/demos/defolio/assets/images/work-3.jpg" alt="">
+        </div>
+    </div>
+    <div class="footer">
+        <strong class="mn" style="color: #333;margin-top: 30px">STAY IN TOUCH</strong> <br>
+        <strong style="color: #fff; margin-top: 20px">Ready to talk</strong>
+        <p style="color: #fff; margin-top: 20px">Feel free to contact us</p>
+        <button  class="letstalk_btn" style="border-style: solid; border-radius: 50px; width: 100px; height: 
+        50px; border-color: #f26464;"><strong>LETS TALK</strong></button>
+        <p class="mn" style="color:#333; margin-top: 100px">© 2022 All rights reserved. Free minimal bootstrap template by <a class="des" href="https://www.designstub.com/">Designstub.</a></p>
+    </div>
+</body>
+</html>
