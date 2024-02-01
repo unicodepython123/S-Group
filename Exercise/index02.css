@@ -1,0 +1,241 @@
+body, html {
+    margin: 0;
+    background-color: #2f3238;
+}
+* {
+    text-decoration: none;
+    font-family: Raleway, Arial, sans-serif;
+}
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    font-size: 11.04px;
+    font-weight: 800;
+    font-family: Raleway, Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 18px;
+    text-decoration: none;
+    color:#3495d9;
+}
+#previous_btn {
+    margin-left: 34px;
+}
+#back_btn {
+    margin-right: 34px;
+}
+#previous_btn::before {
+    content:"😃";
+}
+#back_btn::before {
+    content: "☀️";
+}
+.btn:hover {
+    color: #4a778b;
+}
+h1 {
+    color: #ffff;
+    font-size: 64px;
+    font-weight: 800;
+}
+.text_01 > p {
+    color: rgb(116, 119, 123);
+    font-size: 30px;
+    font-weight: 300;
+    margin-top:-40px;
+}
+.text_01 {
+    text-align: center;
+    margin-top: 80px;
+}
+.div_btn {
+    display: flex;
+    justify-content: center;
+}
+.set2_btn {
+    margin: 15px;
+    padding: 15px;
+}
+.set2_btn {
+    color: #3495d9;
+    font-weight: 900;
+}
+.set2_btn:hover {
+    background-color:#3c414a;
+    color: #ffff;
+    
+}
+/* 2 hình lily */
+.lily_text, .sadie_text {
+    width: 1000px;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: Raleway, Arial, sans-serif;
+    color: #3c414a;
+}
+
+.text_02 > h3 {
+    color: #ffff;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.nice {
+    font-weight: 300;
+}
+.text_02 > p {
+    color: #ffff;
+    font-size: 13.7px;
+    font-weight: 400;
+    margin-left: 2px;
+    margin-top: 30px;
+    transition-property: margin-top;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.text_02 {
+    width: fit-content;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    transition-property: top;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.img_text02 {
+    width: 480px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.img_text02 > img {
+    margin-left: -40px;
+    transition-property: margin-left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.phong {
+    width: 480px;
+    height: 360px;
+    background-color: rgba(48, 133, 163, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lily_img {
+    display: flex;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+}
+.img_text02 {
+    margin: 20px;
+    position: relative;
+}
+
+.img_text02:hover .phong {
+    background-color: unset;
+}
+.img_text02:hover .text_02 {
+    top: 180px;
+}
+.img_text02:hover .text_02 > p {
+    margin-top: 0;
+}
+.img_text02:hover .img1 {
+    margin-left: 0;
+}
+/* 2 hình sadie */
+.text_03 > h3 {
+    color: #575b6d;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 140px;
+    position: relative;
+    transition-property: top;
+    transition-duration: 10s;
+    transition-timing-function: ease;
+}
+.holy {
+    font-weight: 300;
+}
+.text_03 > p {
+    color: #ffff;
+    font-size: 13.7px;
+    font-weight: 400;
+    margin-top: -40px;
+}
+.text_03 {
+    width: 300px;
+    height: 170px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: hidden;
+    transition-property: overflow;
+    /* transition-delay: 2s; */
+    transition-duration: 10s;
+    transition-timing-function: ease;
+}
+.phong01 {
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: none;
+    transition-property: background-image;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+}
+.img_text03 {
+    position: relative;
+}
+.sadie_img {
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+.img_text03 {
+    margin: 20px
+}
+.sadie {
+    margin-top: 20px;
+}
+.img_text03:hover .phong01 {
+    background-image: linear-gradient(0,rgba(5, 51, 67, 0.8),rgba(255, 255, 255,0.25));
+    /* animation-name: wipe-in-up;
+    animation-duration: 1s;
+    animation-timing-function: ease; */
+}
+.img_text03:hover h3 {
+    color: #ffff;
+    top: -40px;
+}
+.img_text03:hover .text_03{
+    overflow: unset;
+}
+/* @keyframes wipe-in-up {
+    from {
+      clip-path: inset(100% 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:up"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
+  } */

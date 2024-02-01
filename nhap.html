@@ -6,22 +6,47 @@
     <title>Document</title>
     <style>
         .dad {
-            width: 100%;
-            height: 120px;
-            background-color: bisque;
-            display: flex;
-            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-left: 200px;
         }
         .child {
-            width: 100px;
+            width: 50px;
             height: 50px;
+            background-color: rgba(255, 0, 0,0.5);
+            /*position: absolute;
+            top: 100%;*/
+        }
+        /*.abc {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+        .dad:hover .abc {
+            background-color: aqua;
+        }
+        .dad:hover .child {
+            top: 50px;
+        }*/
+        .kmn {
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            overflow: hidden;
+        }
+        .kmn:hover .child {
             background-color: black;
         }
     </style>
 </head>
 <body>
-    <div class="dad">
-        <div class="child"></div>
+    <div class="kmn">
+        <div class="dad">
+            <div class="abc"></div>
+            <div class="child" ></div>
+        </div>
     </div>
+        
 </body>
 </html>
