@@ -94,16 +94,16 @@ h1 {
     margin-left: 2px;
     margin-top: 30px;
     transition-property: margin-top;
-    transition-duration: 0.5s;
+    transition-duration: 0.04s;
     transition-timing-function: ease;
 }
 
 .text_02 {
     width: fit-content;
-    height: 100px;
+    height: 90px;
     overflow: hidden;
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 50px;
     transition-property: top;
     transition-duration: 0.4s;
@@ -147,6 +147,7 @@ h1 {
 }
 .img_text02:hover .text_02 {
     top: 180px;
+    /* overflow: unset; */
 }
 .img_text02:hover .text_02 > p {
     margin-top: 0;
@@ -161,8 +162,9 @@ h1 {
     font-weight: 800;
     margin-bottom: 140px;
     position: relative;
+    top: 0;
     transition-property: top;
-    transition-duration: 10s;
+    transition-duration: 0.2s;
     transition-timing-function: ease;
 }
 .holy {
@@ -183,10 +185,10 @@ h1 {
     transform: translate(-50%, -50%);
     text-align: center;
     overflow: hidden;
-    transition-property: overflow;
-    /* transition-delay: 2s; */
-    transition-duration: 10s;
-    transition-timing-function: ease;
+    transition: overflow 2s ease;
+    /* transition-property: overflow;
+    transition-duration: 2s;
+    transition-timing-function: ease; */
 }
 .phong01 {
     width: 480px;
@@ -194,10 +196,10 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: none;
+    background-image: url(fuhrur.png);
     transition-property: background-image;
-    transition-duration: 5s;
-    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
 }
 .img_text03 {
     position: relative;
@@ -227,15 +229,3 @@ h1 {
 .img_text03:hover .text_03{
     overflow: unset;
 }
-/* @keyframes wipe-in-up {
-    from {
-      clip-path: inset(100% 0 0 0);
-    }
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-  
-  [transition-style="in:wipe:up"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
-  } */
