@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        html, body {
+            height: 100%;
+        }
+        .abc {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
+        }
+        .container {
+            width: 975px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item1 {
+            position: relative;
+            top: 60px;
+        } 
+        .item1 p {
+            font-size: 28px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 400;
+        }
+        .item1 img {
+            width: 320px;
+            height: auto;
+            margin-left: -30px;
+            margin-bottom: -10px;
+        }
+        .login-box {
+            width: 396px;
+            height: 315px;
+            background-color: #ffffffff;
+            padding-top: 15px;
+            padding-bottom: 24px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mail-input > input, .password-input > input {
+            width: 330px;
+            height: 22px;
+            padding: 14px 16px;
+            border: 1px solid #f0f2f5;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        } 
+        .login-btn {
+            width: 330px;
+            height: 22px;
+            padding: 14px 16px;
+            border: 1px solid transparent;
+            box-sizing: unset;
+            border-radius: 10px;
+            background-color: #0866ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            color: #ffffffff;
+            cursor: pointer;
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+        }
+        .login-box-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #dfe1e5;
+            padding-bottom: 30px;
+        }
+        .login-box-top div a {
+            text-decoration: unset;
+            color:  rgb(8, 102, 255);
+            cursor: pointer;
+            font-size: 14px;
+            font-family: Helvetica, Arial, sans-serif;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .login-box-top div a:hover {
+            text-decoration: underline;
+        }
+        .create-acc-btn {
+            box-sizing: unset;
+            border: unset;
+            border-radius: 10px;
+            width: 146.225px;
+            height: 48px;
+            padding: 0 16px;
+            background-color: #42b72a;
+            font-size: 17px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            color: #ffffffff;
+            margin-top: 25px;
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+        }
+        .item2 {
+            width: fit-content;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-box {
+            margin-bottom: 20px;
+        }
+        .item2 > p {
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .item2 p strong a {
+            text-decoration: unset;
+            color: #000000;
+        }
+        .item2 p strong a:hover {
+            text-decoration: underline;
+        }
+        .input:active {
+            border-color: rgb(8, 102, 255);
+        }
+        .create-acc-btn:hover {
+            background-color: #3ca327;
+        }
+        input {
+            font-size: 17px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        .login-btn:hover {
+            background-color: #1665e6;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let khdb = ["&", "=", "_", "'", '-', "+", ",", "<",">", "."]
+        let abc = [];
+        for (let i = 97; i <= 122; i++) {
+            abc.push(String.fromCharCode(i));
+        }
+        let ABC = [];
+        for (let i = 97; i <= 122; i++) {
+            ABC.push(String.fromCharCode(i).toUpperCase());
+        }
+        let number = [0,1,2,3,4,5,6,7,8,9]
+        //----------------------------------------------
+        function checkmail(a) {
+            for (let i = 0; i < a.length; i = i + 1) {
+                if (a[i] == " ") {
+                    return false
+                }
+                else if (a[i] != " ") {
+                    if (!abc.includes(a[i]) && !number.includes(a[i])) {
+                        return false
+                    }
+                }
+            return true
+            }
+        }  
+        //----------------------------------------------
+        function checkpassword(a) {
+            if (a.length == 8) {
+                let abccheck = 0
+                let ABCcheck = 0
+                let numbercheck = 0
+                let khdbcheck = 0
+                for (let i = 0; i < 8; i++) {
+                    if (abc.includes(a[i])) {
+                        abccheck = 1
+                    }
+                    if (ABC.includes(a[i])) {
+                        ABCcheck = 1
+                    }
+                    if (number.includes(parseInt(a[i]))) {
+                        numbercheck = 1
+                    }
+                    if (khdb.includes(a[i])) {
+                        khdbcheck = 1
+                    }
+                }
+                if (abccheck + ABCcheck + numbercheck + khdbcheck == 4) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            else {
+                return false
+            }
+        } 
+        function check() {
+            let username = document.getElementById('mailID').value;
+            console.log(username)
+            let password = document.getElementById("passID").value;
+            console.log(password)
+            if (checkmail(username) == true && checkpassword(password) == true) {
+                alert("Đúm rùi pé ưi")
+            }
+            else if (checkmail(username) == false || checkpassword(password) == false || (checkmail(username) == false && checkpassword(password) == false)) {
+                alert("Sai rùi pé ưi")
+            }
+        }
+    </script>
+    <div class="abc">
+        <div class="container">
+            <div class="item1">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+                <div><p>Facebook giúp bạn kết nối và chia sẻ</p></div>
+                <div><p>với mọi người trong cuộc sống của bạn.</p></div>
+            </div>
+            <div class="item2">
+                <div class="login-box">
+                    <div class="login-box-top">
+                        <div class="mail-input">
+                            <input type="text" name="" id="mailID" placeholder="Email hoặc số điện thoại">
+                        </div>
+                        <div class="password-input">
+                            <input type="text" name="" id="passID" placeholder="Mật khẩu">
+                        </div>
+                        <button class="login-btn" onclick="check()">Đăng nhập</button>
+                        <div><a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Quên mật khẩu?</a></div>
+                    </div>
+                    <button class="create-acc-btn">Tạo tài khoản mới</button>
+                </div>     
+                <p><strong><a href="">Tạo Trang</a></strong> dành cho người nổi tiếng, thương hiệu hoặc</p>
+                <p>doanh nghiệp.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

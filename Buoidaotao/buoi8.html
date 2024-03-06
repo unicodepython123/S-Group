@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ['apple', 'banana', 'orange'];
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+        let numbers = [1, 2, 3, 4, 5];
+        numbers.forEach(function(number) {
+            console.log(number);
+        });
+        function Person(name, age) {  // constructor
+            this.abc = name;
+            this.xyz = age;
+        }
+        let person1 = new Person('Alice', 25); 
+        console.log(person1.abc)
+        console.log(person1.xyz)  
+        let person = {
+            name: 'John',
+            age: 30,
+            gender: 'male',
+            abc: 45
+        };
+        console.log(person.age) 
+        console.log(person.gender) 
+        console.log(person.name)
+        console.log(person.abc)     
+        let currentDate = new Date();
+        console.log(currentDate.getDate()); // Output: current month
+        let abc = new Date();
+        console.log(abc.getMonth()); // Output: current month
+        let person2 = { name: 'John', age: 30 }; // đối tượng person2
+        for (let key in person2) {
+            console.log(key + ': ' + person[key]);
+        }
+        let person3 = {
+            name: 'John',
+            age: 30,
+            gender: 'male'
+        };
+        for (let key in person3) {
+            console.log(key)
+            console.log(person[key])
+        }
+        for (let abc in person3) {
+            console.log(abc + '100') // mặc định in key
+        }
+        let fruits1 = ['apple', 'banana', 'orange'];
+        for (let fruit of fruits1) {
+            console.log(fruit);
+        }
+        for (let abc in fruits1) {
+            console.log(abc + '111')    // mặc định in index
+        }
+        let numbers10 = [1, 2, 3, 4, 5];
+        numbers10.push(6); // Thêm phần tử vào cuối mảng
+        numbers10.unshift(6)
+        console.log(numbers10[6])
+        let numbers11 = [1, 2, 3, 4, 5];
+        numbers11.forEach (
+                function(number) {    // lấy lần lượt phần tử của mảng
+                console.log(number);
+            }
+        );
+
+    </script>
+</body>
+</html>
