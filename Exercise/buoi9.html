@@ -156,7 +156,6 @@
         // console.log(username)
         // let password = document.getElementById("passID").value;
         // console.log(password)
-        let khdb = ["&", "=", "_", "'", '-', "+", ",", "<",">", "."]
         let abc = [];
         for (let i = 97; i <= 122; i++) {
             abc.push(String.fromCharCode(i));
@@ -197,7 +196,7 @@
                     if (number.includes(parseInt(a[i]))) {
                         numbercheck = 1
                     }
-                    if (khdb.includes(a[i])) {
+                    if (!abc.includes(a[i]) && !number.includes(a[i])) {
                         khdbcheck = 1
                     }
                 }
