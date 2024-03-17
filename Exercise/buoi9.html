@@ -196,11 +196,18 @@
                     if (number.includes(parseInt(a[i]))) {
                         numbercheck = 1
                     }
-                    if (!abc.includes(a[i]) && !number.includes(a[i])) {
-                        khdbcheck = 1
+                    if (!abc.includes(a[i]) && !ABC.includes(a[i])) {
+                        if (number.includes(a[i]))
+                        {
+                            khdbcheck = 0
+                        }
+                        else {
+                            khdbcheck = 1
+                        }
                     }
                 }
                 if (abccheck + ABCcheck + numbercheck + khdbcheck == 4) {
+                    console.log("Dung hay sai",khdbcheck)
                     return true
                 }
                 else {
