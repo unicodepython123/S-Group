@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM events  -->
+    <h1 onclick="console.log(Math.random())">
+        <!-- Khi thực hiện event vào thẻ con của 1 thẻ đang có thuộc tính DOM event 
+        thì luồng chạy như sau: lắng nghe span (dù span không có sự kiện) -> ăn ra cha (cha có sự kiện) -->
+        <span onclick="console.log(this)">DOM events</span>
+        <!-- Nếu span cũng có sự kiện thì click span thì nó cũng sẽ chạy cho cha  -->
+        <!-- Nếu cha không có sự kiện thì sẽ không có chuyện gì xảy ra -->
+        <!-- Kích con mà cha có sự kiện thì nó sẽ nổi bọt  -->
+    </h1>
+    <!-- this: in ra node element đó -->
+    <h2 onclick="console.log(this.innerText)">DOM event -> this</h2>
+    <h1 class="abc">H1 ABC Element</h1>
+
+
+    <!-- DOM events example -->
+    <input type="text">
+    <input type="checkbox">
+    
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+    <br>
+    <!-- PreventDefault and StopPropagation -->
+    <a name ="abc" href="https://www.w3schools.com/jsref/dom_obj_event.asp">
+        Học lập trình w3school
+    </a>
+    <br>
+    <a name = "abc" href="https://www.youtube.com/watch?v=4ZnQur6rewg&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=78">
+        youtube f8 lập trình
+    </a>
+
+    <div>
+        DIV
+            <!-- sẽ chạy thằng con trước -->
+            <button>click me!</button>
+    </div>
+
+    <!-- Event listener -->
+    
+    <button id="btn">Click me!</button>
+</body>
+<script src="./event.js"></script>
+</html>

@@ -1,15 +1,17 @@
 * {
     margin: 0;
+    background-color: blueviolet;
 }
-.container {
+.container, .new {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: blueviolet;
+    
 }
-.container1 {
+.container1, .new {
     width: 300px;
     height: auto;
+    overflow-wrap: break-word;
 }
 .container1 .top img {
     width: 300px;
@@ -18,7 +20,7 @@
 .title {
     font-size: 18px;
 }
-.description > p , .container div span, .tag{
+.description > p , .container1 div span, .tag{
     font-size: 11px;
 }
 .tag {
@@ -39,11 +41,13 @@
     top: 130px;
     border-radius: 10px;
 }
-.form {
+.create-form {
     width: 500px;
     height: auto;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    z-index: 99999;
+    
+}
+.add_value,.create {
+    background-color: #ffffff;
 }
